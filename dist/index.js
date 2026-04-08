@@ -48,6 +48,23 @@ let BroadcastInputService = class BroadcastInputService {
         document.body.appendChild(bar);
         document.body.classList.add('tabby-broadcast-input-enabled');
         this.inputElement = input;
+        requestAnimationFrame(() => {
+            this.adjustLayout(bar.offsetHeight || 54);
+        });
+    }
+    adjustLayout(barHeight) {
+        const appRoot = document.querySelector('app-root');
+        if (appRoot) {
+            const pos = window.getComputedStyle(appRoot).position;
+            if (pos === 'absolute' || pos === 'fixed') {
+                appRoot.style.bottom = `${barHeight}px`;
+            }
+            else {
+                appRoot.style.paddingBottom = `${barHeight}px`;
+                appRoot.style.boxSizing = 'border-box';
+            }
+        }
+        window.dispatchEvent(new Event('resize'));
     }
     installStyles() {
         if (document.getElementById(STYLE_ID)) {
@@ -56,16 +73,11 @@ let BroadcastInputService = class BroadcastInputService {
         const style = document.createElement('style');
         style.id = STYLE_ID;
         style.textContent = `
-            body.tabby-broadcast-input-enabled {
-                padding-bottom: 54px;
-            }
-
             #${BAR_ID} {
                 position: fixed;
                 left: 0;
                 right: 0;
                 bottom: 0;
-                z-index: 100000;
                 display: flex;
                 gap: 8px;
                 align-items: center;

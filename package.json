@@ -1,0 +1,11 @@
+{
+  "name": "tabby-broadcast-input",
+  "version": "1.0.0",
+  "description": "Broadcast commands to all tabs",
+  "main": "dist/index.js",
+  "keywords": [
+    "tabby-plugin"
+  ],
+  "author": "fgonzalez",
+  "license": "MIT"
+}

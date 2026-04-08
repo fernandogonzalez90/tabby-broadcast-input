@@ -1,31 +1,29 @@
 {
   "name": "tabby-broadcast-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Always-visible command bar for Tabby to broadcast commands to all terminal tabs",
   "main": "dist/index.js",
   "keywords": [
     "tabby-plugin"
   ],
+  "author": "fgonzalez",
   "license": "MIT",
   "files": [
     "dist/",
-    "README.md",
-    "package.json"
+    "README.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@angular/core": "9.1.13",
     "tabby-core": "1.0.163",
     "tabby-terminal": "1.0.163"
   },
-  "peerDependencies": {
-    "@angular/core": "9.1.13",
-    "tabby-core": "^1.0.163",
-    "tabby-terminal": "^1.0.163"
-  },
   "devDependencies": {
+    "@angular/core": "9.1.13",
+    "tabby-core": "1.0.163",
+    "tabby-terminal": "1.0.163",
     "typescript": "^5.6.3"
   }
 }

@@ -7,6 +7,11 @@
     "tabby-plugin"
   ],
   "license": "MIT",
+  "files": [
+    "dist/",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },

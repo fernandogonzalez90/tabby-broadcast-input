@@ -1,6 +1,6 @@
 {
   "name": "tabby-broadcast-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Always-visible command bar for Tabby to broadcast commands to all terminal tabs",
   "main": "dist/index.js",
   "keywords": [

@@ -23,8 +23,5 @@ npm run build
 
 ## Instalar en Tabby
 
-1. Copia esta carpeta en el directorio de plugins de Tabby.
-2. Asegurate de que exista `dist/index.js` ejecutando el build.
-3. Reinicia Tabby.
-
 Tabby detecta el plugin porque `package.json` incluye el keyword `tabby-plugin`.
+por lo que puedes instalarlo directamente desde la seccion de Complementos
